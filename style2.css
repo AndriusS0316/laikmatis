@@ -1,0 +1,142 @@
+.body {
+  background-color: #eee;
+}
+
+/* form {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+/* button {
+  padding: 15px 40px;
+  font-size: 50px;
+  line-height: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 10px #0002;
+} */
+
+/* The main CSS styles for the countdown timer. */
+
+button[data-setter] {
+outline: none;
+background: transparent;
+border: none;
+font-family: 'Roboto';
+font-weight: 300;
+font-size: 18px;
+width: 25px;
+height: 30px;
+/* pliuso, minuso mygtukai */
+color: rgb(255, 123, 0); 
+cursor: pointer;
+}
+
+button[data-setter]:hover { opacity: 0.5; }
+
+.setters {
+position: absolute;
+left: 85px;
+top: 75px;
+}
+
+.minutes-set {
+float: left;
+margin-right: 28px;
+}
+
+.seconds-set { float: right; }
+
+.controlls {
+position: absolute;
+left: 75px;
+top: 105px;
+text-align: center;
+}
+
+.display-remain-time {
+font-family: 'Roboto';
+font-weight: 100;
+font-size: 65px;
+/* laikmacio likes laikas */
+color: rgb(255, 123, 0);
+}
+
+#pause {
+outline: none;
+background: transparent;
+border: none;
+margin-top: 10px;
+width: 50px;
+height: 50px;
+position: relative;
+}
+
+.play::before {
+display: block;
+content: "";
+position: absolute;
+top: 8px;
+left: 16px;
+border-top: 15px solid transparent;
+border-bottom: 15px solid transparent;
+/* mygtukas skirtas pradeti atgalini laiko skaiciavima */
+border-left: 22px solid yellowgreen;
+}
+
+.pause::after {
+content: "";
+position: absolute;
+top: 8px;
+left: 12px;
+width: 15px;
+height: 30px;
+background-color: transparent;
+border-radius: 1px;
+/* mygtukas skirtas sustabdyti atgalini laiko skaiciavima */
+border: 5px solid yellowgreen;
+border-top: none;
+border-bottom: none;
+}
+
+#pause:hover { opacity: 0.8; }
+
+.e-c-base {
+fill: none;
+/* praejas laikas ant apskritimo */
+stroke: rgb(255, 123, 0);
+stroke-width: 4px
+}
+
+.e-c-progress {
+fill: none;
+/* dar nepraejas laikas ant apskritimo */
+stroke: yellowgreen;
+stroke-width: 4px;
+transition: stroke-dashoffset 0.7s;
+}
+
+.e-c-pointer {
+/* slenkancio apskritimo vidurys */
+fill: rgb(255, 123, 0);
+/* slenkancio apskritimo krastas */
+stroke: yellowgreen;
+stroke-width: 2px;
+}
+
+#e-pointer { transition: transform 0.7s; }
+
+
+
+.laikrodis {
+display: flex;
+gap: 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
