@@ -1,6 +1,16 @@
 
 
 
+
+const restart = document.querySelector('.restart');
+const min10 = document.querySelector('.min10');
+const min15 = document.querySelector('.min15');
+const min20 = document.querySelector('.min20');
+const min30 = document.querySelector('.min30');
+const min45 = document.querySelector('.min45');
+
+
+
 { document.querySelector(".laikrodis").style.display = "block"; }
 { document.querySelector(".timesUp").style.display = "none"; }
 
@@ -32,6 +42,10 @@ let timeLeft;
 let wholeTime = 1 * 60; // manage this to set the whole time 
 let isPaused = false;
 let isStarted = false;
+
+
+
+
 
 
 update(wholeTime, wholeTime); //refreshes progress bar
@@ -72,16 +86,19 @@ function timer(seconds) { //counts time, takes seconds
     intervalTimer = setInterval(function () {
         timeLeft = Math.round((remainTime - Date.now()) / 1000);
         if (timeLeft < 0) {
-            clearInterval(intervalTimer);
-            isStarted = false;
-            setterBtns.forEach(function (btn) {
-                btn.disabled = false;
-                btn.style.opacity = 1;
-            });
-            displayTimeLeft(wholeTime);
-            pauseBtn.classList.remove('pause');
-            pauseBtn.classList.add('play');
-            return;
+
+            { document.querySelector(".laikrodis").style.display = "none"; }
+            { document.querySelector(".timesUp").style.display = "block"; }
+            // clearInterval(intervalTimer);
+            // isStarted = false;
+            // setterBtns.forEach(function (btn) {
+            //     btn.disabled = false;
+            //     btn.style.opacity = 1;
+            // });
+            // displayTimeLeft(wholeTime);
+            // pauseBtn.classList.remove('pause');
+            // pauseBtn.classList.add('play');
+            // return;
         }
         displayTimeLeft(timeLeft);
     }, 1000);
@@ -120,3 +137,36 @@ function displayTimeLeft(timeLeft) { //displays time on the input
 }
 
 pauseBtn.addEventListener('click', pauseTimer);
+
+//mygtukai
+function min10Click () {
+    console.log("10");
+    wholeTime = 10 * 60;
+};
+
+function min15Click () {
+    console.log("15");
+    wholeTime = 15 * 60;
+};
+
+function min20Click () {
+    console.log("20");
+    wholeTime = 20 * 60;
+};
+
+function min30Click () {
+    console.log("30");
+    wholeTime = 30 * 60;
+};
+
+function min45Click () {
+    console.log("45");
+    wholeTime = 45 * 60;
+};
+//mygtukai
+
+min10.addEventListener('click', min10Click);
+min15.addEventListener('click', min15Click);
+min20.addEventListener('click', min20Click);
+min30.addEventListener('click', min30Click);
+min45.addEventListener('click', min45Click);
