@@ -1,3 +1,11 @@
+
+
+
+{ document.querySelector(".laikrodis").style.display = "block"; }
+{ document.querySelector(".timesUp").style.display = "none"; }
+
+
+
 // The main JavaScript to enable the countdown timer.
 
 //circle start

@@ -140,3 +140,15 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 }
+
+
+.timesUp {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
